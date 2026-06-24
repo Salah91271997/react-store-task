@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-brand: #4e2fd2;
+  --color-brand-foreground: #ffffff;
+
+  --color-surface: #edf4ff;
+  --color-card: #ffffff;
+
+  --color-ink: #1f1f1f;
+  --color-body: #575757;
+  --color-muted: #484848;
+  --color-subtle: #8a93a3;
+
+  --color-step-plus: #f0f4f7;
+  --color-step-minus: #e6ebf0;
+  --color-step-icon: #525963;
+
+  --color-divider: #e6ebf0;
+
+  --color-link: #0000ee;
+  --color-success: #0aa288;
+  --color-strike-sale: #d8392b;
+  --color-strike-muted: #575757;
+
+  --radius-card: 16px;
+  --radius-control: 10px;
+  --radius-pill: 9999px;
+
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-card);
+    color: var(--color-ink);
+  }
+
+  :where(button, a, input, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']) {
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.25s ease-out both;
+}
