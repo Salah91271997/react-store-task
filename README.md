@@ -1,5 +1,7 @@
 # Bundle Builder
 
+[![CI](https://github.com/Salah91271997/react-store-task/actions/workflows/ci.yml/badge.svg)](https://github.com/Salah91271997/react-store-task/actions/workflows/ci.yml)
+
 A multi-step **security-system bundle builder** with a live, recalculating review panel —
 built as a production-minded React prototype.
 
@@ -7,7 +9,7 @@ Choose cameras, a plan, sensors, and extra protection through a 4-step accordion
 summary panel beside it prices the system live, tracks per-variant quantities, and persists
 the shopper's configuration across visits.
 
-> **Live demo:** _add your deployment URL here (Vercel/Netlify)_
+> **🔗 Live demo:** https://react-store-task.vercel.app
 
 ---
 
@@ -60,8 +62,13 @@ back to a validated local JSON file if the API is offline, so a clean clone alwa
 - **Live review panel** — grouped line items, synced steppers, shipping, satisfaction
   guarantee, financing line, recalculating total with savings callout, Checkout, and a
   working **Save my system for later**.
+- **Click-to-select cards** — click a card to add or remove it from the system; the quantity
+  stepper and color chips still work independently. "Required" items (the hub) can't be removed.
+- **Motion** — subtle hover lift on cards, chevron rotation on expand/collapse, and a fade-in on
+  step content (all respect `prefers-reduced-motion`).
 - **Persistence** — configure → leave → return and it's restored exactly (localStorage).
-- **Responsive** — side-by-side rail on desktop, stacked and usable down to phone widths.
+- **Responsive across three breakpoints** — single-column mobile stack, side-by-side review
+  rail on desktop, and a full-width review band at very wide (≥1536px) widths.
 
 ---
 
